@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: hsl(60, 56%, 71%);
+  background-color: #dede8c;
   /* the scrollbar is always visible to avoid the content shifting aside when it appears */
   overflow-y: scroll;
 }

@@ -1,12 +1,25 @@
-const form = document.getElementById('email-form');
 const emailInput = document.getElementById('email-input');
 const submitBtn = document.getElementById('submit-btn');
 
 submitBtn.addEventListener('click', (e) => {
-  console.log('click')
   e.preventDefault();
-  sendEmail();
+  checkEmailValidity();
+  if (checkEmailValidity()) {
+    sendEmail();
+  } else {
+    alert('Please enter valid email')
+  }
 })
+
+// taken from https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
+function checkEmailValidity() {
+  if (emailInput.value) {
+    let result = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i.test(emailInput.value);
+    return result;
+  } else {
+    return false;
+  }
+}
 
 function sendEmail() {
   Email.send({
@@ -20,8 +33,12 @@ function sendEmail() {
       <meta charset="UTF-8">
       <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="color-scheme" content="light only">
       <title>Exercise 1 - Email HTML</title>
       <style>
+        :root {
+          color-scheme: light only;
+        }
         * {
           padding: 0;
           margin: 0;
@@ -31,8 +48,10 @@ function sendEmail() {
           a:hover {
             color:#7800F4 !important;
           }
-          tbody {
-            background-color: #F2F2F2;
+          @media (prefers-color-scheme: dark) {
+            img { 
+              background-color: white !important; 
+            }
           }
       </style>
     </head>
@@ -40,8 +59,8 @@ function sendEmail() {
       <table style="border-collapse: collapse; margin: 0 auto; max-width: 350px;">
         <tbody style="background-color: #F2F2F2;">
           <tr>
-            <th style="padding: 20px">
-              <img src="./images/ijovi-logo.jpg" style="border-radius: 50%;
+            <th style="padding: 20px ">
+              <img src="https://i.ibb.co/ZKtHb0v/ijovi-logo.jpg" style="border-radius: 50%;
                 border: 2px solid #7800F4;
                 box-shadow: 4px 5px 8px 0px rgba(0,0,0,0.75);
                 display: inline-block;

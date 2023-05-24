@@ -4,15 +4,77 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercise 1 - Email HTML</title>
+  <meta name="description" content="healthcare company's information banner">
+  <title>Exercise 2 - Banner</title>
+  <link rel="stylesheet" href="banner.css">
 </head>
 <body>
-  <form id="email-form">
-    <input id="email-input" type="email">
-    <button id="submit-btn" type="submit">Send Email</button>
-  </form>
-
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="email.js"></script>
+  <div class="banner">
+    <a href="https://www.ijovi.com" target="_blank">
+      <div class="banner-header">
+        <div class="logo-div">
+          <img src="./images/ijovi-logo2.png" alt="logo">
+        </div>
+        <div class="banner-heading">
+          <h2>Healthcare</h2>
+          <h2>Communication</h2>
+          <h2>Partner</h2>
+        </div>
+        <button id="info-link-sm" class="info-link-sm">Click to learn more</button>
+      </div>
+    </a>
+    <div class="info-container">
+      <a href="https://www.ijovi.com" target="_blank">
+        <div class="info-header">
+          <img src="./images/ijovi_logo.png" alt="logo">
+          <div class="info-heading">
+            <h3>Healthcare</h3>
+            <h3>Communication Partner</h3>
+          </div>
+        </div>
+      </a>
+      <section class="expertise-section">
+        <h3>our expertise<span class="period">.</span></h3>
+        <div class="expertise-info">
+          <p>Our focus is on <span class="text--italic">Healthcare Communication</span>. We believe the heart of a brand strategy starts with the patient experience. Using our individual competencies and skills, coming from industry and academia, we leverage the synergies that are generated from our diversity. Our knowledge spans <span class="text--danger">from</span> <span class="text--italic">medicine, market access, molecular, and human biology, to business and innovation, marketing and strategic communication, health economics and data analytics,</span> <span class="text--primary">to</span> <span class="text--italic">graphic design, art and illustrations and motion design.</span></p>
+          <p>We work closely with the market access experts at Zealth, providing us the holistic understanding of pharma and healthcare.</p>
+        </div>
+      </section>
+      <article class="info-article">
+        <div class="info-article-heading">
+          <h4>Marketing & Sales Excellence</h4>
+          <img src="./images/section_icon.png" alt="section icon">
+        </div>
+        <p class="info-article-thesis">A good brand strategy enables you to identify and utilize your competitive advantage.</p>
+        <p class="info-article-para">Driving demand requires a strategy that is aligned with the specific market,
+          but also operations that follow all the way through. This requires true understanding of the patient and customer, and tools that support effective execution, measurement and reporting, and internal engagement. We help you to unlock these opportunities and ensure that every action you take conveys your brand promise and maximizes the value of your product.</p>
+      </article>
+      <article class="info-article">
+        <div class="info-article-heading">
+          <h4>Insights & Strategy</h4>
+          <img src="./images/section_icon.png" alt="section icon">
+        </div>
+        <p class="info-article-thesis">Today, the customers control what information and communication they want and set their expectations accordingly.</p>
+        <p class="info-article-para">Therefore, the marketing today must be centered on the needs and beliefs of the individual health care professionals or patients. A holistic approach using omnichannel engagement provides the opportunity to maintain HCP contact conveniently and cost-effectively at broad scale. We support you in creating the customer journey that generates a seamless brand experience.</p>
+      </article>
+      <article class="info-article">
+        <div class="info-article-heading">
+          <h4>Design & Communication</h4>
+          <img src="./images/section_icon.png" alt="section icon">
+        </div>
+        <p class="info-article-thesis">We help you to identify the most important information for your audience and create visual narratives that inspire your audiences to act.</p>
+        <p class="info-article-para">We have a deep understanding of medical aspects, and we understand the complexity of presenting clinical results. We also create concepts that catch attention, generate clear understanding, and uphold consistency to create differentiation and recognition of your company. Every single element, be it a chart or an icon, should contribute towards the business goals. Our combined expertise makes us your ideal Design Partner.</p>
+      </article>
+      <article class="info-article">
+        <div class="info-article-heading">
+          <h4>Medical Affairs Excellence</h4>
+          <img src="./images/section_icon.png" alt="section icon">
+        </div>
+        <p class="info-article-thesis">We know the importance of adapting communication to your audience.</p>
+        <p class="info-article-para">Situations such as internal training and patient communication require the ability to make the complexity of medicine and research understandable and digestible on a non-expert level. When it comes to healthcare professionals, communicating clear and correct content is vital, since their capacity and time to absorb new information is limited. With our extensive background within medicine, molecular biology, and human biology, from both academic and industry perspectives, we know how to frame your product propositions in a way that healthcare professionals find relevant and convincing.</p>
+      </article>
+    </div>
+  </div>
+<script src="main.js"></script>
 </body>
 </html>
